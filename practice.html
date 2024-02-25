@@ -5,9 +5,12 @@
   </head>
   <body>
     <a-scene>
-      <a-box color="red" position="0 2 -5" rotation="0 45 45" scale="2 2 2" height="1"></a-box>
-      <a-sphere color="red" position="1 0 13" scale="2 2 2"></a-sphere>
-      <a-entity id="box" geometry="primitive: box" material="color: red" environment="preset: forest; dressingAmount: 100"></a-entity>
+      <a-assets>
+        <img id="texture" src=""
+      </a-assets>
+      <a-box color="red" position="0 2 -5" rotation="0 45 45" scale="5 5 5" height="1"></a-box>
+      <a-sphere color="red" position="1 2 13" scale="4 4 4"></a-sphere>
+      <a-sky color="#00ffff"></a-sky>
     </a-scene>
   </body>
 </html>

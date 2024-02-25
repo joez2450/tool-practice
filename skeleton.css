@@ -3,16 +3,34 @@ li {
 }
 
 label {
-    padding:3em;
+    padding:2.5em;
     text-align:center;
 }
 
 h3 {
     padding:1em;
     letter-spacing:0.15em;
+    text-align:center;
+    padding-right:3em;
 }
 
 p {
     padding:1.2em;
-    font-size:2em;
+    font-size:1.9em;
+}
+
+@media (max-width:550px){
+h3 {
+    text-align:center;
+    margin-left:2.5em;
+}
+    label {
+    text-align:center;
+ }
+ p{
+    text-align:center;
+ }
+ li {
+    text-align:center;
+ }
 }
