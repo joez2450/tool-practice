@@ -2,7 +2,8 @@
   <head>
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.4.0/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/MozillaReality/ammo.js@8bbc0ea/builds/ammo.wasm.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.2/dist/aframe-physics-system.js"></script>
     <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 <body>
@@ -19,32 +20,34 @@
       <video id="hi" src="video/3d-monochrome-abstract-art-video-animation-featuring-a-surreal-chrome-sphere-c-SBV-348789757-preview.mp4" autoplay loop="true"></video>
       <video id="hi2" src="video/shapes-moving-synergy-texture-abstract-animated-background-with-moving-geometr-SBV-348787527-preview.mp4" autoplay loop="true"></video>
       <audio id="hi3" src="video/video_sound1.wav"></audio>
-      <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v$npm_package_version/dist/aframe-physics-system.min.js"></script>
-
     </a-assets>
-<a-scene fog="true" physics="debug: true; gravity: -9.8;">
+
+
+
+
+
+
+
+
+
+    <a-scene physics="driver: ammo; restitution: 1">
     <a-sky src="#h2" radius="1350"></a-sky>
-    <a-sphere src="#h3" position="10 2 0" scale="2 2 2" metalness="0.9"></a-sphere>
-    <a-sphere src="#h6" position="0 2 0" scale="2 2 2" metalness="0.9"></a-sphere>
-    <a-sphere src="#h7" position="-10 2 0" scale="2 2 2" metalness="0.9"></a-sphere>
-    <a-sound src="src: url(video/sound1.wav)" autoplay="true" loop="true" position="0 2 5"></a-sound>
-    <a-plane
-    material= "repeat: 5 5;
-    normal-map: #h9;
-    normal-map-repeat: 5 5;"
-    scale="50 50 1"
-    rotation="-90 0 0"
-    position="0 -3 0"
-    src="#h8">
-    </a-plane>
+    <a-sphere src="#h3" position="10 5 0" scale="2 2 2" ammo-body="type: dynamic" ammo-shape="type: sphere"></a-sphere>
+    <a-sphere src="#h6" position="0 5 0" scale="2 2 2" ammo-body="type: dynamic" ammo-shape="type: sphere"></a-sphere>
+    <a-sphere src="#h7" position="-10 5 0" scale="2 2 2"></a-sphere>
+    <a-plane material= "repeat: 5 5; normal-map: #h9; normal-map-repeat: 5 5;" scale="50 50 1" rotation="-90 0 0" position="0 -3 0" src="#h8" ammo-body="type: static" ammo-shape="type: box"></a-plane>
     <a-entity position= "0 0 20" camera="active: true">
     <a-camera></a-camera>
     </a-entity>
-    <a-video src="#hi" width="8" height="4.5" position="5 9 0">
-    </a-video>
-    <a-video src="#hi2" width="8" height="4.5" position="-5 9 0">
-    </a-video>
-    <a-text value="Testing World!" position="-7 15 0" scale="10 10 10" color="black"></a-text>
 </a-scene>
+
+
+
+
+
+
+
+
+
 </body>
 </html>
